@@ -1,61 +1,155 @@
+/* background */
+/* start */
 body{
+    display: flex;
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
-#main{
+/* end */
+
+
+/* declared all div flex */
+/* start */
+div{
+    display: flex;
+}
+/* end */
+
+
+/* heading part */
+/* start */
+#title{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 165px;
-    /* width: 50vw; */
-    /* margin: auto; */
-    /* padding: 100px; */
 }
 h1{
     font-size: 50px;
 }
-img{
+/* end */
+
+
+/* img and related animations for odd ids*/
+/* start */
+.odd>img{
+    display: none;
     float: left;
     height: 50vh;
     width: 33vw;
     border-radius: 20px;
     padding: 10px;
-    /* transition: ; */
-    animation: lefttori8 2s ease-out 0s 1 forwards;
 }
-@keyframes lefttori8 {
-    /* transform: translateX(50%); */
+.active.odd>img{
+    /* display: inherit; */
+    display: initial;
+    float: left;
+    height: 50vh;
+    width: 33vw;
+    border-radius: 20px;
+    padding: 10px;
+    animation: right_to_left_img 2s ease-out 0s 1 forwards;
+}
+@keyframes right_to_left_img {
     0%
     {
-        /* float: right; */
         transform: translateX(181%);
         opacity: 0;
     }
     100%{
-        /* float: left; */
         opacity: 1;
     };
 }
-div>p{
-    /* float: right; */
-    animation: lefttori8text 4s ease-out 0s 1 forwards;
-    /* color: blue; */
+/* end */
+
+
+/* animations of text for odd ids*/
+/* start */
+.odd>p{
+    display: none;
+    padding: 10px;
+    border: 2px solid blue;
+    /* display: flex; */
 }
-@keyframes lefttori8text {
+.active.odd>p{
+    padding: 10px;
+    border: 2px solid blue;
+    display: flex;
+    animation: right_to_left_text 4s ease-out 0s 1 forwards;
+}
+@keyframes right_to_left_text {
     0%
     {
-        /* float: right; */
         transform: translateX(181%);
         opacity: 0;
     }
-    /* 50%{
-        opacity: 0.1;
-    } */
     75%{
         opacity: 0.5;
     }
     100%{
-        /* float: left; */
         opacity: 1;
     };
 }
+/* end */
+
+/* img and related animations for even ids */
+/* start */
+.even>img{
+    display: none;
+    float: right;
+    height: 50vh;
+    width: 33vw;
+    border-radius: 20px;
+    padding: 10px;
+}
+.active.even>img{
+    /* display: inherit; */
+    display: initial;
+    float: right;
+    height: 50vh;
+    width: 33vw;
+    border-radius: 20px;
+    padding: 10px;
+    animation: left_to_right_img 2s ease-out 0s 1 forwards;
+}
+@keyframes left_to_right_img {
+    0%
+    {
+        transform: translateX(-181%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    };
+}
+/* end */
+
+/* text and related animations for even ids */
+/* start */
+.even>p{
+    display: none;
+    /* display: flex; */
+    padding: 10px;
+    border: 2px solid blue;
+}
+.active.even>p{
+    display: flex;
+    padding: 10px;
+    border: 2px solid blue;
+    animation: left_to_right_text 4s ease-out 0s 1  forwards;
+}
+@keyframes left_to_right_text {
+    0%
+    {
+        transform: translateX(-181%);
+        opacity: 0;
+    }
+    75%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    };
+}
+/* end */
