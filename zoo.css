@@ -36,7 +36,7 @@ h1{
 .odd>img{
     display: none;
     float: left;
-    height: 50vh;
+    height: 95vh;
     width: 33vw;
     border-radius: 20px;
     padding: 10px;
@@ -45,7 +45,7 @@ h1{
     /* display: inherit; */
     display: initial;
     float: left;
-    height: 50vh;
+    height: 95vh;
     width: 33vw;
     border-radius: 20px;
     padding: 10px;
@@ -98,7 +98,7 @@ h1{
 .even>img{
     display: none;
     float: right;
-    height: 50vh;
+    height: 95vh;
     width: 33vw;
     border-radius: 20px;
     padding: 10px;
@@ -107,7 +107,7 @@ h1{
     /* display: inherit; */
     display: initial;
     float: right;
-    height: 50vh;
+    height: 95vh;
     width: 33vw;
     border-radius: 20px;
     padding: 10px;
